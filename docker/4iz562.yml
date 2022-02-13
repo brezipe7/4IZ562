@@ -1,69 +1,30 @@
 version: "3.7"
 services:
-  nifi:
+  version: "3.7"
+services:
+ 
+  jupyter-lab:
     domainname: holopage.com
-    hostname: nifi
-    container_name: nifi.holopage.com
-    networks:
-      - holopage
-    dns: 192.168.1.1
-#    image: "apache/nifi:1.9.1"
-    build:
-      dockerfile: ./nifi/nifi.dockerfile
-      context: .
-    ports:
-      - "8081:8080"
-      - "5006:5006"
-      - "5007:5007"
-    restart: on-failure
-    privileged: false
-    volumes:
-      - /home/dpejcoch/Projects/DEV/repository/nifi-extensions:/opt/nifi/nifi-current/extensions:Z
-      - /home/dpejcoch/Projects/DEV/repository/inbox:/opt/nifi/nifi-current/external_repository/input
-      - /home/dpejcoch/Projects/DEV/repository/DMS:/opt/nifi/nifi-current/external_repository/DMS
-      - /home/dpejcoch/Projects/DEV/repository/drivers:/opt/nifi/nifi-current/external_repository/drivers
-    security-opt:
-      - label=disable
-
-  nifi-registry:
-    domainname: holopage.com
-    hostname: nifi-registry
-    container_name: nifi-registry.holopage.com
-    networks:
-      - holopage
-    dns: 192.168.1.1
-#    image: "apache/nifi:1.9.1"
-    image: apache/nifi-registry:latest
-    restart: on-failure
-    privileged: false
-    security-opt:
-      - label=disable
-    ports:
-      - "18080:18080"
-
-  web-server:
-    domainname: holopage.com
-    hostname: web-server
-    container_name: web-server.holopage.com
+    hostname: jupyter-lab
+    container_name: jupyter-lab.holopage.com
     networks:
       - holopage
     dns: 192.168.1.1
     build:
-      dockerfile: ./webserver/webserver.dockerfile
+      dockerfile: ./jupyter-lab/Dockerfile
       context: .
     restart: always
     volumes:
-      - "../frontend/:/var/www/html/"
-      - "/run/media/dpejcoch/EXT_REPOSITORY/:/var/www/html/Linked/"
+      - "../notebooks/:/home/jovyan/notebooks"
     security_opt:
       - label=disable
     ports:
-      - "8080:80"
+      - "8888:8888"
 
-  mysql-server:
+  db-server:
     domainname: holopage.com
-    hostname: mysql-server
-    container_name: mysql-server.holopage.com
+    hostname: db-server
+    container_name: db-server.holopage.com
     command: --default-authentication-plugin=mysql_native_password
     networks:
       - holopage
@@ -73,35 +34,17 @@ services:
     security_opt:
       - label=disable
     environment:
-      MYSQL_ROOT_PASSWORD: cocadaemon
-      MYSQL_USER: dpejcoch
-      MYSQL_PASSWORD: cocadaemon
-      MYSQL_DATABASE: DMS_PROD
+      MYSQL_ROOT_PASSWORD: student
+      MYSQL_USER: student
+      MYSQL_PASSWORD: student
+      MYSQL_DATABASE: 4iz562
     volumes:
-      - ../repository/mysql-data:/var/lib/mysql/
+      - "../mysql-data:/var/lib/mysql/"
     ports:
-      - "3307:3306"
-
-  orientdb:
-    domainname: holopage.com
-    hostname: orientdb
-    container_name: orientdb.holopage.com
-    networks:
-      - holopage
-    dns: 192.168.1.1
-    image: orientdb:latest
-    restart: always
-    volumes:
-      - "/home/dpejcoch/Projects/DEV/repository/orientdb-data:/orientdb/databases"
-    ports:
-      - "2424:2424"
-      - "2480:2480"
-    environment:
-      - ORIENTDB_ROOT_PASSWORD=cocadaemon
+      - "3308:3306"
 
 volumes:
   mysql-data:
-  orientdb-data:
 
 networks:
   holopage:

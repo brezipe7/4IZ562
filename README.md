@@ -66,4 +66,21 @@ $ jupyter lab
 ```
 ### Docker Container
 
+* Potřebujete mít nainstalovaný git, docker / podman, docker-compose / podman-compose
+* Naklonujte si repozitory [4IZ562](https://github.com/dpejcoch/4IZ562)
+* Vytvořte adresář mysql-data na stejné úrovni jako je adresář notebooks
+* Upravte 4iz562.yml konfigurační soubor pro docker-compose (např. dns)
+* Vytvořte kontejnery pomocí:
+```
+docker-compose -f 4iz562.yml up
+```
+* Na konci výstupu bude link na Jupyter Lab, např.
+```
+http://127.0.0.1:8888/lab?token=c78357ca766147e337b268f616c531e3d444c1158fd53a0d
+```
+* Naimportujte data z SQL (<container id> odpovídá CONTAINER ID db-server kontejneru z docker ps)
+```
+podman exec -i <container id> mysql -ustudent -pstudent 4iz562 < 4iz562.sql
+```
+* V Jupyter Lab budou přístupné notebooky z adresáře notebooks
 

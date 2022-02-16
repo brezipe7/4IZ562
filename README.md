@@ -3,18 +3,26 @@
 ## Zadání úlohy
 
 ### Audit kvality dat
-* Technický profiling
+* Technický profiling: s pomocí vybraného nástroje vytvořte profilaci dat (základní popisné statistiky, četnosti syntaktických vzorů, ...)
 * Validace vybraných atributů pomocí regulárních výrazů, kontrolních součtů, lookup a business pravidel
-* Parsing adresy, standardizace, vytvoření porovnávacích kódů a zřetězení na adresní registr
+* Spočtěte úroveň kvantitativních vlastností dat (správnost, úplnost, konzistentnost, ...)
 * Root-cause analýza zjištěných defektů
-* Odevzdání vypracované zprávy auditora
+* Na příkladu modelové firmy odhadněte roční výši nákladů na nekvalitní data
+* Porovnejte možné přínosy nápravných opatření se souvisejícími náklady
+* Proveďte prioritizaci nápravných opatření
+* Navrhněte externí datové zroje pro obohacení dat
+* Navrhněte strategii pro doplnění chybějících hodnot
+* Odevzdání vypracované zprávy auditora + naměřené charakteristiky / náklady
 
 ### Implementace doporučených opatření
 * Optimalizace datového modelu
+* Parsing adresy, standardizace, vytvoření porovnávacích kódů a zřetězení na adresní registr
 * Nastavení příznaku doručitelnosti na adresu na základě pravidel
+* Doplnění chybějících pozorování
 * Unifikace dat klientů, adres, kontaktů
 * Deduplikace klientů
-* Odevzdání CSV souborů
+* Návhr kontrol bránících dalšímu vzniku chyb v datech
+* Odevzdání CSV souborů s vyčištěnými daty
 
 ## Lab
 

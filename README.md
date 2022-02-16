@@ -72,23 +72,59 @@ $ pip install mysql-kernel
 $ python -m mysql_kernel.install
 $ jupyter lab
 ```
+* Otestujte připojení k MySQL:
+```
+$ mysql -u student -p 4iz562 < 4iz562.sql
+```
+* Pokud se objeví následující hláška
+```
+cryptography' package is required for sha256_password or caching_sha2_password auth methods
+```
+... nainstalujte ve vytvořeném virtuálním prostředí cryptography python balíček:
+```
+$ pip install cryptography
+```
+* Pokud budete instalovat Talend Open Studio for Data Quality, stáhněte zip soubor ze Sourceforge.net a nainstalujte default JDK:
+```
+$ sudo apt install default-jdk
+```
+
 ### Docker Container
 
 * Potřebujete mít nainstalovaný git, docker / podman, docker-compose / podman-compose
+* Nainstalujte docker a docker-compose
+```
+$ sudo apt install docker docker-compose
+```
+* Přidejte aktuálního uživatele do skupiny docker
+```
+$ sudo usermod -aG docker $USER
+$ newgrp docker
+```
+* Otestujte, zda vše funguje
+```
+$ docker version
+$ docker-compose version
+```
 * Naklonujte si repozitory [4IZ562](https://github.com/dpejcoch/4IZ562)
 * Vytvořte adresář mysql-data na stejné úrovni jako je adresář notebooks
 * Upravte 4iz562.yml konfigurační soubor pro docker-compose (např. dns)
 * Vytvořte kontejnery pomocí:
 ```
-docker-compose -f 4iz562.yml up
+$ docker-compose -f 4iz562.yml up
 ```
 * Na konci výstupu bude link na Jupyter Lab, např.
 ```
 http://127.0.0.1:8888/lab?token=c78357ca766147e337b268f616c531e3d444c1158fd53a0d
 ```
+* Vytvořte databázi 4iz562:
+```
+create database 4iz562;
+```
 * Naimportujte data z SQL (<container id> odpovídá CONTAINER ID db-server kontejneru z docker ps)
 ```
-podman exec -i <container id> mysql -ustudent -pstudent 4iz562 < 4iz562.sql
+$ docker-compose exec -i <container id> mysql -ustudent -pstudent 4iz562 < 4iz562.sql
 ```
 * V Jupyter Lab budou přístupné notebooky z adresáře notebooks
+* Kompletní dokumentace docker-compose: [https://docs.docker.com/compose/reference/](https://docs.docker.com/compose/reference/)
 

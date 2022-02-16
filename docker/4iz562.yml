@@ -1,7 +1,5 @@
 version: "3.7"
 services:
-  version: "3.7"
-services:
  
   jupyter-lab:
     domainname: holopage.com

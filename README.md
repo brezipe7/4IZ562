@@ -139,7 +139,7 @@ show databases;
 ```
 create database 4iz562;
 ```
-* Z příkazové řádky z adresáře, ve kterém je sql soubor naimportujte data z SQL (<container id> odpovídá CONTAINER ID ##db-server## kontejneru z výpisu docker ps)
+* Z příkazové řádky z adresáře, ve kterém je sql soubor naimportujte data z SQL (<container id> odpovídá CONTAINER ID **db-server** kontejneru z výpisu docker ps)
 ```
 $ docker exec -i <container id> mysql -ustudent -pstudent 4iz562 < 4iz562.sql
 ```

@@ -42,8 +42,20 @@ Alternativní postupy pro vytvoření experimentálního prostředí jsou shrnut
 $ sudo apt update
 $ sudo apt install mysql-server
 ```
-* Nakonfigurujte MySQL Server:
+* Zkontrolujte verzi MySQL Server:
 ```
+$ mysql --version
+```
+* Pro verzi 8.0.28 nakonfigurujte MySQL Server spuštěním mysql_secure_installation. Nepovolte direktivu pro validaci požadavků na minimální kvalitu hesla
+```
+$ sudo mysql_secure_installation
+```
+* Pro verzi 8.0.32 musíte najprve nastavit heslo uživatel root manuálně:
+```
+$ sudo pkill -f mysql_secure_installation
+$ sudo mysql
+mysql> alter user 'root'@'localhost' identified with mysql_native_password by 'student';
+mysql> quit;
 $ sudo mysql_secure_installation
 ```
 * Vytvořte uživatele student a přidělte mu oprávnění
@@ -70,19 +82,55 @@ $ pip install jupyter
 $ pip install jupyterlab
 $ pip install mysql-kernel
 $ python -m mysql_kernel.install
+```
+* Přeinstalujte balíček sqlalchemy verzí 1.4.35 (s novější verzí nebude mysql-kernel fungovat)
+```
+$ pip install sqlalchemy==1.4.35
+```
+* Spusťte jupyter lab (otevře okno prohlížeče)
+```
 $ jupyter lab
 ```
 * Otestujte připojení k MySQL:
 ```
-$ mysql -u student -p 4iz562 < 4iz562.sql
+mysql://student:student@localhost:3306
 ```
 * Pokud se objeví následující hláška
 ```
 cryptography' package is required for sha256_password or caching_sha2_password auth methods
 ```
-... nainstalujte ve vytvořeném virtuálním prostředí cryptography python balíček:
+... nainstalujte z jupyter notebooku cryptography python balíček:
 ```
-$ pip install cryptography
+!pip install cryptography
+```
+Pokud následující příkaz nezobrazí seznam databází na mysql serveru, je nejspíš něco špatně s kernelem nebo sqlalchemy balíčkem
+```
+show databases;
+```
+Pro diagnostiku problému zkuste nejprve zjistit verze balíčků jupyteru. Z notebooku spusťte následující příkaz:
+```
+!jupyter --version
+```
+Výstup by měl být:
+```
+Selected Jupyter core packages...
+IPython          : 8.2.0
+ipykernel        : 6.13.0
+ipywidgets       : 7.7.0
+jupyter_client   : 7.2.2
+jupyter_core     : 4.10.0
+jupyter_server   : 1.16.0
+jupyterlab       : 3.3.4
+nbclient         : 0.6.0
+nbconvert        : 6.5.0
+nbformat         : 5.3.0
+notebook         : 6.4.11
+qtconsole        : 5.3.0
+traitlets        : 5.1.1
+```
+* Dále zkontrolujte verzi sqlalchemy:
+```
+!pip show sqlalchemy
 ```
 * Pokud budete instalovat Talend Open Studio for Data Quality, stáhněte zip soubor ze Sourceforge.net a nainstalujte default JDK:
 ```

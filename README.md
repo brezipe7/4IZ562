@@ -35,8 +35,11 @@ Alternativní postupy pro vytvoření experimentálního prostředí jsou shrnut
 ### VirtualBox VM
 
 * Nainstalujte VirtualBox z [https://www.virtualbox.org/](https://www.virtualbox.org/)
-* Stáhněte si iso Ubuntu Focal Fossa Desktop z [https://www.releases.ubuntu.com/20.04/](https://www.releases.ubuntu.com/20.04/)
-* Vytvořte nove VM s alespoň 2 CPU, 8GB RAM a 20-30 GB VDI
+* Stáhněte si iso Ubuntu Focal Fosa 20.04 [https://www.releases.ubuntu.com/20.04/](https://www.releases.ubuntu.com/20.04/) ... instalační process ale trvá dlouho
+* Prostředí funguje také na Jammy Jellyfish 22.04.1 LTS [https://www.releases.ubuntu.com/22.04/](https://www.releases.ubuntu.com/22.04/) ... celkově svižnější
+* V obou případech zvolte variantu nainstalovat (ne live ISO) a minimalistickou instalaci
+* S Jammy Jellyfish se nainstaluje Python 3.10 (naše laby předpokládají 3.8.4), ale zatím stávající notebooky spuštěné pod 3.10 varují pouze před budoucím odstranění některých balíčků
+* Vytvořte nové VM s alespoň 2 CPU, 8GB RAM a 20-30 GB VDI
 * Nainstalujte MySQL Server:
 ```
 $ sudo apt update

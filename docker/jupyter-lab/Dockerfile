@@ -1,4 +1,4 @@
-FROM jupyter/datascience-notebook:latest
+FROM jupyter/datascience-notebook:python-3.8.4
 
 USER root
 
@@ -10,6 +10,8 @@ USER jovyan
 RUN pip install mysql-kernel
 
 RUN python3 -m mysql_kernel.install
+
+RUN pip install sqlalchemy==1.4.35
 
 RUN mkdir ~/notebooks
 

@@ -18,7 +18,7 @@
 ### Implementace nápravných opatření
 7. **2025-04-04**: Parsing, standardizace, unifikace. Standardizace a unifikace v praxi. Prevence vzniku chyb, oprava stávajících chyb: standardizace, korekce, implementace kontrol. Proces řízení kvality dat (metodiky, modely, projekt implementace).
 8. **2025-04-11**: *Inovační týden (výuka odpadá)* **Termín odevzdání zprávy auditora**
-9. **2025-04-18: *Good Friday (výuka odpadá)*
+9. **2025-04-18**: *Good Friday (výuka odpadá)*
 10. **2025-04-25**: Imputace chybějících pozorování, obohacování dat o externí datové zdroje, geocoding.
 11. **2025-05-02**: *Děkanský den (výuka odpadá)*
 12. **2025-05-09**: Porovnávání a slučování záznamů, Master Data Management, Householding.
@@ -65,11 +65,7 @@
 
 ### Celková klasifikace
 
-* 60% bodů lze získat z praktické úlohy
-* 40% bodů lze získat z testu
-* bonusové body z quizů na přednáškách
-* bonusové body za inovativní přístup
-
+#### Celková známka
 
 * 90 a více bodů = 1
 * 75 - 89 bodů = 2
@@ -77,10 +73,22 @@
 * 50 - 59 bodů = 4+ (možnost dozkoušení)
 * 0 - 49 bodů = nevyhověl
 
+#### Jak lzé získat body
+
+* 60% bodů lze získat z praktické úlohy
+* 40% bodů lze získat z testu
+* bonusové body z quizů na přednáškách
+* bonusové body za inovativní přístup
+
 ## Zdroje ke studiu
+
+### Povinná literatura
 
 * Prezentace k přednáškám
 * Články výslovně zmíněné přednášejícím
+
+### Doporučená literatura
+
 * McGILVRAY, D. Executing Data Quality Projects: Ten Steps to Quality Data and Trusted Information. Morgan Kaufmann, 2008. xviii, 325 s. ISBN 978-0-12-374369-5.
 * MAYDANCHIK, Arkady. Data quality assessment. Bradley Beach: Technics Publications, LLC, [2007], ©2007. xiv, 321 stran. Data quality for practitioners series. ISBN 978-0-9771400-2-2.
 * CHAPMAN, P., KHABAZA, T., SHEARER, C.: CRISP-DM 1.0 Step by step data mining guide. IBM, 2012. ftp://ftp.software.ibm.com/software/analytics/spss/support/Modeler/Documentation/14/UserManual/CRISP-DM.pdf
@@ -100,6 +108,27 @@
 * PEJČOCH, D. Audit datové kvality podle IT Assurance Guide: Using COBIT - 1. díl. In: Data Quality CZ [online]. 2012-03-07 07:14:52. Dostupné z: [URL].
 * PEJČOCH, D. Audit datové kvality podle IT Assurance Guide: Using COBIT - 2. díl. In: Data Quality CZ [online]. 2012-03-07 07:14:52. Dostupné z: [URL].
 * PEJČOCH, D. Audit datové kvality podle IT Assurance Guide: Using COBIT - 3. díl. In: Data Quality CZ [online]. 2012-03-07 07:14:52. Dostupné z: [URL].
+
+### Odborné portály
+
+* Dataversity: https://www.dataversity.net/
+* DAMA: https://www.dama.org/cpages/home
+
+### Osobnosti z oblasti řízení kvality dat a informací
+
+* **Larry English** - guru informační kvality
+* **Jil Dyché** - první dáma Data Governance
+* **Evan Levy** - spoluzakladatel Baseline Consulting, autor řady publikací
+* **David Loshin** - autor řady publikací pojednávajících o dopadu nekvalitních dat do byznysu
+* **prof. Richard Wang** - vůdčí postava MIT Total Data Quality Management program
+* **prof. Carlo Batini** - Università degli Studi di Milano-Bicocca
+* **Thomas C. Redman, Ph.D.** - prezident Navesink Consulting Group
+* **Arkadyi Maydanchik** – audit datové kvality
+* **Dannette McGilvray** – metodika 10 steps
+* **Sunil Soares** – Big Data Quality
+* **John Ladley** – Data Governance
+* **Henrik Gabs Liliendahl** - https://liliendahl.com/ (MDM, Data Quality)
+* **Alex Berson a Larry Dubov** – Master Data Management
 
 ## Lab
 

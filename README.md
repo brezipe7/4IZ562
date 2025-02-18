@@ -5,41 +5,43 @@
 
 ### Úvod do řízení dat
 
-1. 2025-02-21: Úvod, organizační pokyny, motivace k řešení problematiky datové kvality, co je to kvalita dat a informací. Konfigurace labu, představení umělých dat, výstupů, MySQL toolbox.
-2. 2025-02-28: Data, Data Management, vlastnosti dat, příčiny a důsledky nekvalitních dat, Six Sigma, Kaizen, rekonciliace dat, root-cause analýza. Případové studie, měření vlastností da, měření nákladů nekvalitních dat.
-3. 2022-03-07: Data Governance, související právní normy, Entity Recognition, kvalita metadat, datové katalogy, Data Lineage a Data Provenance. Právní normy relevantní pro naši praktickou úlohu, návrh principů, standardů, politik v praxi. Entity Recognition v praxi, anonymizace, masking, pseudonymizace dat.
+1. **2025-02-21**: Úvod, organizační pokyny, motivace k řešení problematiky datové kvality, co je to kvalita dat a informací. Konfigurace labu, představení umělých dat, výstupů, MySQL toolbox.
+2. **2025-02-28**: Data, Data Management, vlastnosti dat, příčiny a důsledky nekvalitních dat, Six Sigma, Kaizen, rekonciliace dat, root-cause analýza. Případové studie, měření vlastností da, měření nákladů nekvalitních dat.
+3. **2022-03-07**: Data Governance, související právní normy, Entity Recognition, kvalita metadat, datové katalogy, Data Lineage a Data Provenance. Právní normy relevantní pro naši praktickou úlohu, návrh principů, standardů, politik v praxi. Entity Recognition v praxi, anonymizace, masking, pseudonymizace dat.
 
 ### Analýza současného stavu
 
-4. 2025-03-14: Data Profiling a alternativní přístupy (analýza procesů, testování kontrol), Data Drift. Výstupy profilingu, příklady implementace v různých nástrojích, process mining.
-5. 2025-03-21: Validace dat, definice pravidel, datové kontroly, DQ Firewall, validační služby, vazba na metriky výkonnosti řízení dat. Validace v praxi, validace proti vybraným API.
-6. 2025-03-28: Audit kvality dat. Vypracování zprávy auditora.
+4. **2025-03-14**: Data Profiling a alternativní přístupy (analýza procesů, testování kontrol), Data Drift. Výstupy profilingu, příklady implementace v různých nástrojích, process mining.
+5. **2025-03-21**: Validace dat, definice pravidel, datové kontroly, DQ Firewall, validační služby, vazba na metriky výkonnosti řízení dat. Validace v praxi, validace proti vybraným API.
+6. **2025-03-28**: Audit kvality dat. Vypracování zprávy auditora.
 
 ### Implementace nápravných opatření
-7. 2025-04-04: Parsing, standardizace, unifikace. Standardizace a unifikace v praxi. Prevence vzniku chyb, oprava stávajících chyb: standardizace, korekce, implementace kontrol. Proces řízení kvality dat (metodiky, modely, projekt implementace).
-8. 2025-04-11: *Inovační týden (výuka odpadá)* **Termín odevzdání zprávy auditora**
-9. 2025-04-18: *Good Friday (výuka odpadá)*
-10. 2025-04-25: Imputace chybějících pozorování, obohacování dat o externí datové zdroje, geocoding.
-11. 2025-05-02: *Děkanský den (výuka odpadá)*
-12. 2025-05-09: Porovnávání a slučování záznamů, Master Data Management, Householding.
+7. **2025-04-04**: Parsing, standardizace, unifikace. Standardizace a unifikace v praxi. Prevence vzniku chyb, oprava stávajících chyb: standardizace, korekce, implementace kontrol. Proces řízení kvality dat (metodiky, modely, projekt implementace).
+8. **2025-04-11**: *Inovační týden (výuka odpadá)* **Termín odevzdání zprávy auditora**
+9. **2025-04-18: *Good Friday (výuka odpadá)*
+10. **2025-04-25**: Imputace chybějících pozorování, obohacování dat o externí datové zdroje, geocoding.
+11. **2025-05-02**: *Děkanský den (výuka odpadá)*
+12. **2025-05-09**: Porovnávání a slučování záznamů, Master Data Management, Householding.
 
 ### Monitorování datové kvality
 
-13. 2025-05-16: Implementace monitoringu, kontinuální zvyšování kvality dat, Augmented Data Quality, specifické formy datové kvality (nestrukturovaná data, Linked Data, ...). Extrakce metadat z nestrukturovaných dat, deduplikace nestrukturovaných dat. Aktuální trendy a výzvy. Příprava na test. 
+13. **2025-05-16**: Implementace monitoringu, kontinuální zvyšování kvality dat, Augmented Data Quality, specifické formy datové kvality (nestrukturovaná data, Linked Data, ...). Extrakce metadat z nestrukturovaných dat, deduplikace nestrukturovaných dat. Aktuální trendy a výzvy. Příprava na test. 
 
 ### Zkouškové období
 
 * 19.5. - 27.6. **zkouškový test**, **odevzdání nápravných opatření** (alespoň týden před koncem)
 
-## Zkouškový test
+## Požadavky na úspěšné absolvování kurzu
+
+### Zkouškový test
 
 * 10 otázek z teorie po 4 bodech, celkem 40% celkového hodnocení
 
-## Praktická úloha
+### Praktická úloha
 
 * 60% celkového hodnocení
 
-### Audit kvality dat
+#### Audit kvality dat
 1. Technický profiling: s pomocí vybraného nástroje vytvořte profilaci dat (základní popisné statistiky, četnosti syntaktických vzorů, ...)
 2. Validace vybraných atributů pomocí regulárních výrazů, kontrolních součtů, lookup a business pravidel
 3. Spočtěte úroveň kvantitativních vlastností dat (správnost, úplnost, konzistentnost, ...)
@@ -51,7 +53,7 @@
 9. Navrhněte strategii pro doplnění chybějících hodnot
 10. Odevzdání vypracované zprávy auditora + naměřené charakteristiky / náklady (PDF dokument dle šablony pro zprávu auditora)
 
-### Implementace doporučených opatření
+#### Implementace doporučených opatření
 1. Optimalizace datového modelu
 2. Parsing adresy, standardizace, vytvoření porovnávacích kódů a zřetězení na adresní registr
 3. Nastavení příznaku doručitelnosti na adresu na základě pravidel
@@ -61,12 +63,13 @@
 7. Návhr kontrol bránících dalšímu vzniku chyb v datech
 8. Odevzdání CSV souborů s vyčištěnými daty + PDF dokumentace provedených opatření
 
-## Celková klasifikace
+### Celková klasifikace
 
 * 60% bodů lze získat z praktické úlohy
 * 40% bodů lze získat z testu
 * bonusové body z quizů na přednáškách
 * bonusové body za inovativní přístup
+
 
 * 90 a více bodů = 1
 * 75 - 89 bodů = 2

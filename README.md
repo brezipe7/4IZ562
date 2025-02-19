@@ -134,5 +134,12 @@
 
 Pro vypracování semestrální práce potřebujete data modelové firmy dostupné jako SQL dump z MySQL / MariaDB databáze. SQL soubor chráněný heslem je dostupný z adresáře [data](data/4iz562.zip).
 
-Doporučené nástroje pro vypracování semestrální práce: MySQL Server, Python + Jupyter Lab, Talend Open Studio for Data Quality [https://sourceforge.net/projects/talendprofiler/](https://sourceforge.net/projects/talendprofiler/)
+Doporučené nástroje:
+* Validace dat (technické testy): Great Expectations (GX) (https://greatexpectations.io), DBT Testing
+* Data Profiling: Ydata Profiling (Python library)
+* Další free nástroje: OpenRafine,  SODA Core (https://www.soda.io), MobyDQ, Deequ, Quadient DataCleaner, Apache Griffin, OpenRafine, DataKitchen (https://datakitchen.io)
+* Ataccama DQ Analzyer (stažitelný na www.ataccama.com) + Master Data Center (instalace na vyžádání) + Atacama ONE Profiler (online)
+* DataCleaner Community Edition dostupný na datacleaner.github.io (data profiling, data wrangling, etc.)
+* Open Source Data Quality and Profiling dostupný na sourceforge.net/projects/dataquality (profiling, metadata discovery, anomaly detection, deduplication, standardization, address correction, data masking)
+* Vlastní nástroj napsaný v SQL + jakýkoliv jazyk (R, Java, Python, ...)
 

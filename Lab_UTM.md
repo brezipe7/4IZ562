@@ -4,24 +4,20 @@
 * Nainstalujte UTM z [https://mac.getutm.app](https://mac.getutm.app)
 * Stáhněte si iso Ubuntu Focal Fosa 20.04 (desktop image varianta) [https://www.releases.ubuntu.com/20.04/](https://www.releases.ubuntu.com/20.04/)
 * Při tvorbě VM vyberte možnost **emulace** – je v zásadě pomalejší, ale umožní spustit jiné architektury než ARM
-* Zvolte variantu nainstalovat a minimalistickou instalaci (instalace i tak bude nějakou dobu trvat)
 * Novému VM přidělte alespoň 2 CPU, 8GB RAM a 20-30 GB VDI (doporučeno 4 CPU a 25 GB VDI)
+* Zvolte variantu nainstalovat a minimalistickou instalaci (instalace i tak bude nějakou dobu trvat)
 * Nainstalujte MySQL Server:
 ```
-$ sudo apt update
+$ sudo apt update && sudo apt upgrade
 $ sudo apt install mysql-server
 ```
 * Zkontrolujte verzi MySQL Server:
 ```
 $ mysql --version
 ```
-* Pro verzi 8.0.28 nakonfigurujte MySQL Server spuštěním mysql_secure_installation. Nepovolte direktivu pro validaci požadavků na minimální kvalitu hesla
+* Pro verzi 8.0.32+ musíte najprve nastavit heslo uživatel root manuálně:
 ```
 $ sudo mysql_secure_installation
-```
-* Pro verzi 8.0.32 musíte najprve nastavit heslo uživatel root manuálně:
-```
-$ sudo pkill -f mysql_secure_installation
 $ sudo mysql
 mysql> alter user 'root'@'localhost' identified with mysql_native_password by 'student';
 mysql> quit;
@@ -34,7 +30,7 @@ mysql> create user 'student'@'%' identified by 'student';
 mysql> grant all privileges on *.* to 'student'@'%'
 ```
 * Vytvořte databázi 4iz562
-* Naimportujte data:
+* Naimportujte data, část za < upravte dle vaší cesty k souboru:
 ```
 $ mysql -u student -p 4iz562 < 4iz562.sql
 ```

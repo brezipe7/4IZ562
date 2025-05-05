@@ -30,7 +30,7 @@ mysql> create user 'student'@'%' identified by 'student';
 mysql> grant all privileges on *.* to 'student'@'%'
 ```
 * Vytvořte databázi 4iz562
-* Naimportujte data, část za < upravte dle vaší cesty k souboru:
+* Naimportujte data, část po < upravte dle vaší cesty k souboru:
 ```
 $ mysql -u student -p 4iz562 < 4iz562.sql
 ```
